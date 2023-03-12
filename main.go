@@ -22,11 +22,11 @@ func main() {
 
 	redisClient := redis.NewClient(&redis.Options{
 		// ex) "localhost:8080"
-		Addr: os.Getenv("REIDS_ADDR"),
+		Addr: os.Getenv("REDIS_ADDR"),
 	})
 	e.Use(limit.RateLimitMiddleware(redisClient, 1))
 
-	proxyTargetUrl, err := url.Parse(os.Getenv("PROXY_TAEGET_URL"))
+	proxyTargetUrl, err := url.Parse(os.Getenv("PROXY_TARGET_URL"))
 	if err != nil {
 		e.Logger.Fatal(err)
 	}
