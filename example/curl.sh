@@ -1,9 +1,8 @@
 #! /bin/sh
 
-URL="localhost:8088"
+URL=host.docker.internal:8088
 
 while true
 do
   curl -o /dev/null $URL
-  sleep 1
 done
