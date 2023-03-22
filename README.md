@@ -7,3 +7,6 @@ APIのレートリミットを制御するGoのecho用ミドルウェアです�
 4. `docker compose up -d --build` containerを立ち上げる
 5. `docker logs curl --follow` curl側でリクエストが送信されていることをかくにんする
 6. `docker logs nginx --follow` nginx側でのリクエスト処理を確認
+
+## 動作の様子
+![代替テキスト](img\play.gif)
