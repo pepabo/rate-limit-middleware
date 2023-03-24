@@ -29,7 +29,7 @@ func main() {
 		e.Logger.Fatal(err)
 	}
 
-	rateLimitTime := 1
+	rateLimitTime := 2
 	e.Use(limit.RateLimitMiddleware(redisClient, rateLimitTime))
 
 	proxyTargetUrl, err := url.Parse(os.Getenv("PROXY_TARGET_URL"))
